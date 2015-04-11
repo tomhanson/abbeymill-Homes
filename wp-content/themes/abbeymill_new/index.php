@@ -57,7 +57,7 @@ if( have_posts()) : while(have_posts()) : the_post();
         $image = get_field('main_photo',$child['ID']);
         ?>
 
-        <li class="property">
+        <li class="property childproperty">
             <a href="<?php echo get_permalink($pID); ?>" data-marker-index="<?php echo $i; ?>">
             <span class="property-image-container">
                 <img src="<?php echo $childimage['sizes']['propertieslist']; ?>" alt="<?php echo $child['post_title']; ?>" />
