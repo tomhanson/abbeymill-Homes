@@ -1,0 +1,2 @@
+[07-Mar-2015 01:33:48 Europe/London] PHP Fatal error:  Call to undefined function get_header() in /home/abbey123/public_html/wp-content/themes/abbeymill_new/index.php on line 1
+[07-Apr-2015 10:06:53 Europe/London] PHP Fatal error:  Call to undefined function get_header() in /home/abbey123/public_html/wp-content/themes/abbeymill_new/index.php on line 1

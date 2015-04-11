@@ -1,0 +1,2 @@
+[07-Mar-2015 01:34:22 Europe/London] PHP Fatal error:  Class 'Walker' not found in /home/abbey123/public_html/wp-includes/nav-menu-template.php on line 16
+[07-Mar-2015 01:34:23 Europe/London] PHP Fatal error:  Call to undefined function is_main_site() in /home/abbey123/public_html/wp-includes/update.php on line 667
