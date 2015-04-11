@@ -53,7 +53,7 @@ function Properties() {
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'page-attributes', ),
 		'taxonomies'          => array( 'category', 'post_tag' ),
-		'hierarchical'        => false,
+		'hierarchical'        => true,
 		'public'              => true,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
