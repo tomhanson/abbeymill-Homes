@@ -13,6 +13,9 @@
 $properties = array( 'overview' => array( 'total' => 0 ) );
 $i = 0;
 
+global $query_string;
+query_posts( $query_string . '&post_parent=0' );
+
 if( have_posts()) : while(have_posts()) : the_post();
 
   $pID = get_the_ID();
@@ -31,7 +34,8 @@ if( have_posts()) : while(have_posts()) : the_post();
   $properties['properties'][$i]['main_photo'] = $image['sizes']['propertieslist'];
   $properties['properties'][$i]['index'] = $i;
   $properties['properties'][$i]['property_title'] = get_the_title();
-  
+  $properties['properties'][$i]['children'] = get_children( array('post_parent'=>get_the_ID(),'post_status'=>'publish'),ARRAY_A );
+
   ?>
     <li id="mk<?php echo $i; ?>" class="property">
         <a href="<?php echo get_permalink($pID); ?>" data-marker-index="<?php echo $i; ?>">
