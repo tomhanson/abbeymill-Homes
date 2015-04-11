@@ -29,6 +29,7 @@
 <script src="<?php print TEMPPATH;?>/js/modernizrTouch.js"></script>
 <script src="<?php print TEMPPATH;?>/js/individual.min.js"></script>
 <script src="<?php print TEMPPATH;?>/js/main.min.js"></script>
+<script src="<?php print TEMPPATH;?>/js/modal.js"></script>
 
 <!--End Plugins -->
 <?php wp_footer(); ?>

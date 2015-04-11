@@ -1,3 +1,4 @@
+
 <?php get_header('individual'); ?>
 <div style="box-shadow: 0 5px 9px rgba(0, 0, 0, 0.18); overflow: hidden;">
     <div class="single-property-tabs">
@@ -37,29 +38,7 @@
                     </div>
                 </div>
             </div>
-            <?php $brochure = get_field('brochure'); ?>
-            <?php if($brochure) { ?>
-            <div id="panel3" class="panel">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div id="flipbook-wrapper">
-                                <div id="flipbook" style="margin: auto;">
-                                    <?php foreach( $brochure as $page ): ?>
-                                    <div class="wowbook-hardpage">
-                                        <img src="<?php echo $page['sizes']['large']; ?>" alt="<?php echo $page['alt']; ?>" />
-                                    </div>
-                                    <?php endforeach; ?> 
-                                </div> 
-                                <div class="download-button">
-                                <a href="<?php the_field('brochure_download'); ?>" target="_blank" class="btn">Download Brochure</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php } ?>
+
             <div id="panel4" class="panel" style="height:350px;">
                 <?php   
                     $latlng = trim(rtrim(ltrim(get_field('latlng'),'('),')'));  
@@ -102,7 +81,7 @@
                                 <li><a href="#panel1">Overview</a></li>
                                 <li><a href="#panel2">Specification</a></li>
                                 <?php if( get_field('brochure') ) { ?>
-                                <li><a id="brochure" href="#panel3">Brochure</a></li>
+                                <li><a data-toggle="modal" data-target="#panel3">Brochure</a></li>
                                 <?php } ?> 
                                 <li><a id="location" href="#panel4">Location</a></li>
                             </ul> 
@@ -127,4 +106,31 @@
             </div>           
         </div>
 </div>
+            <?php $brochure = get_field('brochure'); ?>
+            <?php if($brochure) { ?>
+
+<!-- Modal -->
+<div class="modal fade" id="panel3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div id="" class="panel modal-dialog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="flipbook-wrapper">
+                                <div id="flipbook" style="margin: auto;">
+                                    <?php foreach( $brochure as $page ): ?>
+                                    <div class="wowbook-hardpage">
+                                        <img src="<?php echo $page['sizes']['large']; ?>" alt="<?php echo $page['alt']; ?>" />
+                                    </div>
+                                    <?php endforeach; ?> 
+                                </div> 
+                                <div class="download-button">
+                                <a href="<?php the_field('brochure_download'); ?>" target="_blank" class="btn">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+            <?php } ?>
 <?php get_footer('individual'); ?>
