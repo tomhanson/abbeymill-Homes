@@ -141,6 +141,9 @@
 
                 <h5>For further information please contact
                 <?php bloginfo( 'name' ); ?> – 01234 714844.</h5>
+                <div class="information-button">
+                  <a href="/contact-us" class="btn">Request Information</a>
+                </div>
             </div> 
             <div class="col-sm-4 col-md-3 col-md-offset-1">
                 <h3>Price: £<span><?php the_field('property_price'); ?></span></h3>
