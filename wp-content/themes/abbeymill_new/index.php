@@ -45,16 +45,16 @@ if( have_posts()) : while(have_posts()) : the_post();
                 <div class="property-overlay">
                     <span class="view-property"><img src="<?php print IMAGES; ?>/hover-cross.png" alt="View Property" /></span>
                 </div>
-            </span>        
+            </span>
             <h3><?php echo the_title(); ?></h3>
             <p><?php echo the_field('property_address'); ?></p>
-        </a>    
+        </a>
     </li>
   <?php
 
     foreach($children as $child){
 
-        $image = get_field('main_photo',$child['ID']);
+        $childimage = get_field('main_photo',$child['ID']);
         ?>
 
         <li class="property childproperty">
@@ -74,7 +74,7 @@ if( have_posts()) : while(have_posts()) : the_post();
 
   $i++;
 
-endwhile; endif; 
+endwhile; endif;
 ?>
     </ul>
   </div>

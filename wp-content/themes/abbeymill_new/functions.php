@@ -131,8 +131,7 @@ function baw_theme_setup() {
 
 add_action( 'admin_init', 'posts_order_wpse_91866' );
 
-function posts_order_wpse_91866() 
-{
+function posts_order_wpse_91866() {
     add_post_type_support( 'properties', 'page-attributes' );
 }
 
