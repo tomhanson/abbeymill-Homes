@@ -350,6 +350,14 @@ h5 {
   width: auto !important;
   margin: auto;
 }
+/*Override Bootstrap Modal*/
+.modal-dialog {
+  width: 98%;
+  margin-top: 70px;
+  margin-top: 7rem;
+  padding-top: 70px;
+  padding-top: 7rem;
+}
 .left {
   float: left;
 }

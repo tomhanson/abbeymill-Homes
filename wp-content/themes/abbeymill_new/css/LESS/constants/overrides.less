@@ -1,21 +1,26 @@
 .flexslider {
-    border: none;
-    .margin(0);
+  border: none;
+  .margin(0);
 }
 .flex-direction-nav {
-    a {
-      &:before {
-       font-size: 30px;   
-      }
+  a {
+    &:before {
+      font-size: 30px;
     }
+  }
 }
 .flexslider {
-    .slides {
-     img {
-       max-height: 450px;
-         width: auto !important;
-         margin: auto;
-     }
+  .slides {
+    img {
+      max-height: 450px;
+      width: auto !important;
+      margin: auto;
     }
-    
+  }
+}
+/*Override Bootstrap Modal*/
+.modal-dialog {
+  width: 98%;
+  .margin-top(70);
+  .padding-top(70);
 }
