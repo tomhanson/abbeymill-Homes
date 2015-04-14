@@ -58,7 +58,7 @@ if( have_posts()) : while(have_posts()) : the_post();
         ?>
 
         <li class="property childproperty">
-            <a href="<?php echo get_permalink($pID); ?>" data-marker-index="<?php echo $i; ?>">
+            <a href="<?php echo get_permalink($pID); ?>">
             <span class="property-image-container">
                 <img src="<?php echo $childimage['sizes']['propertieslist']; ?>" alt="<?php echo $child['post_title']; ?>" />
                 <div class="property-overlay">
