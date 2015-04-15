@@ -58,7 +58,7 @@ if( have_posts()) : while(have_posts()) : the_post();
         ?>
 
         <li class="property childproperty">
-            <a href="<?php echo get_permalink($pID); ?>">
+            <a href="<?php echo get_permalink($pID); ?>"">
             <span class="property-image-container">
                 <img src="<?php echo $childimage['sizes']['propertieslist']; ?>" alt="<?php echo $child['post_title']; ?>" />
                 <div class="property-overlay">
@@ -128,7 +128,12 @@ function loadResults (data) {
             lat = position.lat();
             lng = position.lng();
             map.setCenter(lat, lng);
-            $("#properties").scrollTo((propertyheight*e.index));
+
+              var totalli = $( "#resultstable li" ).length;
+              var activeli = $( "#resultstable li" ).index( $('#mk' + e.index) );
+              var propertyheight = $( "#resultstable li").height();
+
+            $("#properties").scrollTo((propertyheight*activeli));
             $('#properties .active').removeClass('active');
             $('#mk' + e.index).addClass('active');
           }
