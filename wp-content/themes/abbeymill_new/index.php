@@ -54,7 +54,7 @@ if( have_posts()) : while(have_posts()) : the_post();
 
     foreach($children as $child){
 
-        $childimage = get_field('sub_image',$child['ID']);
+        $childimage = get_field('main_photo',$child['ID']);
         ?>
 
         <li class="property childproperty">
