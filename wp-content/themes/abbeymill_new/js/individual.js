@@ -22,7 +22,7 @@ $(document).ready(function() {
     $('.tabs li:first a').click(); //open first tab    
     //Single Page Flipbook
     $("#flipbook").wowBook({
-        width: 1000,
+        width: 1200,
         height: 400,
         centeredWhenClosed : true,
         hardcovers : true,
@@ -31,7 +31,7 @@ $(document).ready(function() {
         zoomWindow : "#flipbook-wrapper",
         zoomStep : 1,
         scaleToFit: "#flipbook-wrapper"              
-    });    
+    });
     //Initialise the flipbook and the google map on tab click.           
     $("#brochure").on("click", function(){
         $("#flipbook").trigger("resize") // this will make the book resize the 

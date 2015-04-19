@@ -81,7 +81,7 @@
                                 <li><a href="#panel1">Overview</a></li>
                                 <li><a href="#panel2">Specification</a></li>
                                 <?php if( get_field('brochure') ) { ?>
-                                <li><a id="brochure" href="#panel3" data-toggle="modal">Brochure</a></li>
+                                <li type="button" id="brochure" data-target="#panel3" data-toggle="modal">Brochure</li>
                                 <?php } ?> 
                                 <li><a id="location" href="#panel4">Location</a></li>
                             </ul> 
@@ -111,15 +111,15 @@
 
 <!-- Modal -->
 <div class="modal fade" id="panel3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div id="" class="pane modal-dialog">
+  <div class="pane modal-dialog">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     </div>
      <div class="modal-content">
-      <div class="container modal-body">
+      <div class="container-fluid modal-body">
           <div class="row">
               <div class="col-xs-12">
-                  <div id="flipbook-wrapper">
+                  <div id="flipbook-wrapper" style="width: 100%;">
                       <div id="flipbook" style="margin: auto;">
                           <?php foreach( $brochure as $page ): ?>
                           <div class="wowbook-hardpage">
@@ -138,5 +138,8 @@
   </div>
 </div>
 <?php } ?>
+
+<!-- Large modal -->
+<li type="button" class="btn btn-primary" data-toggle="modal" data-target="#panel3">Large modal</li>
 
 <?php get_footer('individual'); ?>
