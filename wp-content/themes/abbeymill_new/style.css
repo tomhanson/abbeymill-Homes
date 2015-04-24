@@ -353,10 +353,6 @@ h5 {
 /*Override Bootstrap Modal*/
 .modal-dialog {
   width: 98%;
-  margin-top: 70px;
-  margin-top: 7rem;
-  padding-top: 70px;
-  padding-top: 7rem;
 }
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, 0);
