@@ -23,7 +23,7 @@
                         </li>
 
             <?php endforeach; 
-            wp_reset_postdata(); ?>           
+            wp_reset_postdata(); ?>
           
         </ul>
         <nav class="slides-navigation">
