@@ -129,11 +129,10 @@ function loadResults (data) {
             lng = position.lng();
             map.setCenter(lat, lng);
 
-              var totalli = $( "#resultstable li" ).length;
               var activeli = $( "#resultstable li" ).index( $('#mk' + e.index) );
-              var propertyheight = $( "#resultstable li").height();
+              var propertyheight = $( "#resultstable li").outerHeight();
 
-            $("#properties").scrollTo((propertyheight*activeli));
+            $("#properties").scrollTo( ( ( propertyheight + 15 ) * activeli ) );
             $('#properties .active').removeClass('active');
             $('#mk' + e.index).addClass('active');
           }
