@@ -624,7 +624,7 @@ body,
 /*Individual Property Page */
 #flipbook {
   width: 80%;
-  height: 400px;
+  height: 500px;
 }
 .download-button {
   position: absolute;
@@ -639,7 +639,7 @@ body,
   margin: 40px auto;
   margin: 4rem auto;
   width: 80%;
-  height: 400px;
+  height: 500px;
   position: relative;
 }
 .tab-wrapper {

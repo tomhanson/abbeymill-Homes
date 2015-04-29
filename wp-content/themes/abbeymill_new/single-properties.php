@@ -81,8 +81,8 @@
                                 <li><a href="#panel1">Overview</a></li>
                                 <li><a href="#panel2">Specification</a></li>
                                 <?php if( get_field('brochure') ) { ?>
-                                <li type="button" id="brochure" data-target="#panel3" data-toggle="modal">Brochure</li>
-                                <?php } ?> 
+                                <li id="brochure" data-target="#panel3" data-toggle="modal">Brochure</li>
+                                <?php } ?>
                                 <li><a id="location" href="#panel4">Location</a></li>
                             </ul> 
                         </div>  
@@ -120,7 +120,7 @@
           <div class="row">
               <div class="col-xs-12">
                   <div id="flipbook-wrapper" style="width: 100%;">
-                      <div id="flipbook" style="margin: auto;">
+                      <div id="flipbook" style="margin: auto; max-width: 100%;">
                           <?php foreach( $brochure as $page ): ?>
                           <div class="wowbook-hardpage">
                               <img src="<?php echo $page['sizes']['large']; ?>" alt="<?php echo $page['alt']; ?>" />
@@ -138,8 +138,5 @@
   </div>
 </div>
 <?php } ?>
-
-<!-- Large modal -->
-<li type="button" class="btn btn-primary" data-toggle="modal" data-target="#panel3">Large modal</li>
 
 <?php get_footer('individual'); ?>
