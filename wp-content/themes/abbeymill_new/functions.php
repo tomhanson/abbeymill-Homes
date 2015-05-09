@@ -122,7 +122,7 @@ add_action( 'init', 'Portfolio', 0 );
 
 add_action( 'after_setup_theme', 'baw_theme_setup' );
 function baw_theme_setup() {
-    add_image_size('propertieslist',240,150,true);
+    add_image_size('propertieslist',240,135,true);
     //add_image_size('custom',450,450,false);
     add_image_size('portfolioThumb',350, 350,true);
     add_image_size('slider',9999, 600,false);
