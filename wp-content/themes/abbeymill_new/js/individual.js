@@ -36,6 +36,9 @@ $(document).ready(function() {
     $(".modal").on("opened", function(){
         $("#flipbook").trigger("resize"); // this will make the book resize
     });
+    $('.modal').on('shown.bs.modal', function (e) {
+        $("#flipbook").trigger("resize"); // this will make the book resize
+    });
     $("#location").on("click", function(){
         initialize();
     });
