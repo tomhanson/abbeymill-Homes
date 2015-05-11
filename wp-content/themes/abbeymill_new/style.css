@@ -350,6 +350,48 @@ h5 {
   width: auto !important;
   margin: auto;
 }
+/*Override Bootstrap Modal*/
+.modal-dialog {
+  width: 98%;
+  margin: 10px auto;
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+}
+.modal-header {
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: none;
+  background-color: #ffffff;
+  padding: 15px 15px 0px 15px;
+  padding: 1.5rem 1.5rem 0rem 1.5rem;
+}
+.modal-header button {
+  border: none;
+  background-color: white;
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 1.5;
+  padding: 0px 0px 0px 5px;
+  padding: 0rem 0rem 0rem 0.5rem;
+  cursor: pointer;
+}
+.modal-content {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-top: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
 .left {
   float: left;
 }
@@ -614,23 +656,27 @@ body,
 /*Individual Property Page */
 #flipbook {
   width: 80%;
-  height: 400px;
+  height: 530px;
 }
 .download-button {
-  position: absolute;
-  bottom: -20px;
+  margin: 30px 0px 10px;
+  margin: 3rem 0rem 1rem;
   right: 0;
+}
+.download-button p {
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 .information-button {
   margin: 0px 0px 10px 0px;
   margin: 0rem 0rem 1rem 0rem;
 }
 #flipbook-wrapper {
-  margin: 40px auto;
-  margin: 4rem auto;
+  margin: 0px auto 20px;
+  margin: 0rem auto 2rem;
   width: 80%;
-  height: 400px;
   position: relative;
+  min-height: 500px;
 }
 .tab-wrapper {
   min-height: 350px;
@@ -711,7 +757,8 @@ body,
   margin-left: -1px;
   margin-left: -0.1rem;
 }
-.tabs li a {
+.tabs li a,
+.tabs li#brochure {
   padding: 5px 10px;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -720,8 +767,13 @@ body,
   -moz-transition: 0.2s all;
   -ms-transition: 0.2s all;
   -o-transition: 0.2s all;
+  cursor: pointer;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
-.tabs li a:hover {
+.tabs li a:hover,
+.tabs li#brochure:hover {
   background-color: #afaf95;
 }
 .specs ul,
@@ -1045,11 +1097,13 @@ body,
     border-radius: 0;
     border-bottom: 1px dotted #333333;
   }
-  #panels .tabs li a {
+  #panels .tabs li a,
+  #panels .tabs li#brochure {
     float: none;
     padding: 12px 15px;
     padding: 1.2rem 1.5rem;
     display: block;
+    clear: both;
   }
   #maparea #properties {
     width: 100%;

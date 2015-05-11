@@ -27,8 +27,9 @@
 <script type="text/javascript" src="<?php print TEMPPATH; ?>/js/lightbox.min.js"></script>
 <script type="text/javascript" src="<?php print TEMPPATH; ?>/js/wow_book/wow_book.min.js"></script>
 <script src="<?php print TEMPPATH;?>/js/modernizrTouch.js"></script>
-<script src="<?php print TEMPPATH;?>/js/individual.min.js"></script>
+<script src="<?php print TEMPPATH;?>/js/individual.js"></script>
 <script src="<?php print TEMPPATH;?>/js/main.min.js"></script>
+<script src="<?php print TEMPPATH;?>/js/modal.js"></script>
 
 <!--End Plugins -->
 <?php wp_footer(); ?>

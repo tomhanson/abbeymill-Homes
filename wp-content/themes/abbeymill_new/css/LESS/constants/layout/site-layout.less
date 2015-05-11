@@ -107,7 +107,7 @@ html, body, #single-map { height: 100%; margin: 0; padding: 0;}
         &:hover {
             .property-overlay {
                 .opacity(1);
-                .transition(0.2s opacity);                
+                .transition(0.2s opacity);
             }
         }
     }
@@ -115,22 +115,24 @@ html, body, #single-map { height: 100%; margin: 0; padding: 0;}
 /*Individual Property Page */
 #flipbook {
     width: 80%;
-    height: 400px;
+    height: 530px;
 }
 .download-button {
-    position: absolute;
-    bottom: -20px;
-    right: 0;   
+  .margin(30, 0, 10);
+  right: 0;
+  p {
+    .margin-bottom(10);
+  }
 }
 .information-button {
   .margin(0, 0, 10, 0);
 }
 #flipbook-wrapper {
-    margin: 40px auto; 
-    margin: 4rem auto;
+    margin: 0px auto 20px; 
+    margin: 0rem auto 2rem;
     width: 80%; 
-    height: 400px; 
-    position: relative; 
+    position: relative;
+    min-height: 500px;
 }
 .tab-wrapper {
  min-height: 350px;   
@@ -169,22 +171,22 @@ html, body, #single-map { height: 100%; margin: 0; padding: 0;}
         position: relative;
          &:first-child {
              .border-radiuses(0, 0, 5px, 0);
-             
-            
         }
         &:last-child {
             .border-radiuses(0, 5px, 0, 0); 
-            
         }
         + li {
            .margin-left(-1); 
         }
 
-        a {
+        a, &#brochure {
             .padding(5, 10);
              text-decoration: none;         
              float: left;
             .transition(0.2s all);
+            cursor: pointer;
+            .font-size(14);
+            line-height: 1.5;
             &:hover {
                 background-color: @primary-color;
             }

@@ -22,21 +22,24 @@ $(document).ready(function() {
     $('.tabs li:first a').click(); //open first tab    
     //Single Page Flipbook
     $("#flipbook").wowBook({
-        width: 1000,
-        height: 400,
+        width: 1600,
+        height: 600,
         centeredWhenClosed : true,
         hardcovers : true,
         turnPageDuration : 1500,
         mouseWheel : "zoom",
         zoomWindow : "#flipbook-wrapper",
         zoomStep : 1,
-        scaleToFit: "#flipbook-wrapper"              
-    });    
-    //Initialise the flipbook and the google map on tab click.           
-    $("#brochure").on("click", function(){
-        $("#flipbook").trigger("resize") // this will make the book resize the 
+        scaleToFit: "#flipbook-wrapper"
+    });
+    //Initialise the flipbook and the google map on tab click.
+    $(".modal").on("opened", function(){
+        $("#flipbook").trigger("resize"); // this will make the book resize
+    });
+    $('.modal').on('shown.bs.modal', function (e) {
+        $("#flipbook").trigger("resize"); // this will make the book resize
     });
     $("#location").on("click", function(){
-        initialize(); 
+        initialize();
     });
 });
