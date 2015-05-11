@@ -128,7 +128,8 @@
                           <?php endforeach; ?>
                       </div>
                       <div class="download-button">
-                      <a href="<?php the_field('brochure_download'); ?>" target="_blank" class="btn">Download Brochure</a>
+                        <p>Click the edges of the book to turn the page or download a brochure by clicking below</p>
+                        <a href="<?php the_field('brochure_download'); ?>" target="_blank" class="btn">Download Brochure</a>
                       </div>
                   </div>
               </div>
